@@ -1,0 +1,7 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'Kye Gregory | Portfolio'
+
+[module]
+    [[module.imports]]
+        path = 'github.com/kye-gregory/hugo-portfolio-markdown'
