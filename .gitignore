@@ -1,0 +1,9 @@
+# content is sourced using hugo modules
+src/archtypes
+src/content
+
+# build / cached files
+src/_vendor
+src/public
+src/resources
+src/.hugo_build.lock
