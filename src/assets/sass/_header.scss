@@ -1,0 +1,20 @@
+.header {
+  padding-top: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.navbar-group {
+  display: inline-flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}

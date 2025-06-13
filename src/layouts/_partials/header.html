@@ -1,0 +1,18 @@
+<div class="header container" role="navigation">
+    <nav class="navbar section" aria-label="Main Navigation">
+        <ul class="navbar-group">
+            <li>Kye Gregory</li>
+        </ul>
+        <ul class="navbar-group">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li>
+                <a class="menu-link {{ if or ($currentPage.IsMenuCurrent " main" .) ($currentPage.HasMenuCurrent "main"
+                    .) }}active{{ end }}" href="{{ .URL }}">
+                    {{ .Name }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+</div>
