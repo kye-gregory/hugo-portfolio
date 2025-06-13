@@ -1,0 +1,20 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+
+{{ define "main" }}
+<section class="section">
+    <h2>{{ title .Section }}</h2>
+    {{ range where .Site.RegularPages "Section" .Section }}
+    <ol>
+        <li>
+            <article>
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <p>{{ .Summary }}</p>
+                {{ if .Truncated }}
+                <a href="{{ .RelPermalink }}">Read more...</a>
+                {{ end }}
+            </article>
+        </li>
+    </ol>
+    {{ end }}
+</section>
+{{ end }}
