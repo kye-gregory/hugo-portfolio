@@ -1,13 +1,15 @@
 :root {
   --bg-color: white;
-  --text-color: black;
+  --text-color: #121212;
   --text-color-muted: #888;
+  --border-color-muted: #ddd;
 }
 
 .dark {
   --bg-color: #121212;
   --text-color: white;
   --text-color-muted: #888;
+  --border-color-muted: #323232;
 }
 
 body {
