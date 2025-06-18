@@ -16,3 +16,13 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  padding: 0 0.2rem 0.2rem;
+}
+
+a:hover {
+  font-style: italic;
+}
