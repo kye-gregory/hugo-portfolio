@@ -5,15 +5,12 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const toggle = document.getElementById('theme-switch');
-        if (!toggle) return;
-
         const storedTheme = localStorage.getItem('theme');
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const isDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
 
         document.documentElement.classList.toggle('dark', isDark);
         toggle.checked = isDark;
-        console.log(toggle);
         toggle.addEventListener('change', () => {
             const darkModeOn = toggle.checked;
             document.documentElement.classList.toggle('dark', darkModeOn);
