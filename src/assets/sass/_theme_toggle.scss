@@ -48,3 +48,8 @@ $toggle-slider: $toggle-height - $toggle-padding;
 .theme-toggle input:checked+.slider::before {
   transform: translateX($toggle-width - $toggle-slider - $toggle-padding);
 }
+
+/* default position for dark theme */
+html.dark .slider::before {
+  transform: translateX($toggle-width - $toggle-slider - $toggle-padding);
+}
