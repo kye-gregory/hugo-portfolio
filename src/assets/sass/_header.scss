@@ -1,11 +1,12 @@
-.header {
-  padding-top: 1.5rem;
-}
-
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-color: var(--border-color-muted);
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1.2rem 2rem;
 }
 
 .navbar-group {
@@ -17,4 +18,17 @@
 .navbar ul {
   margin: 0;
   padding: 0;
+}
+
+.navbar a:not(.logo-text) {
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+
+.logo-text {
+  font-weight: 900;
+}
+
+.logo-text:hover {
+  font-style: inherit;
 }
