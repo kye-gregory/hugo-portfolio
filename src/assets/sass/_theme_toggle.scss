@@ -23,7 +23,7 @@ $toggle-slider: $toggle-height - $toggle-padding;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--text-color);
   border-radius: $toggle-height;
   cursor: pointer;
   transition: 0.4s;
@@ -36,13 +36,13 @@ $toggle-slider: $toggle-height - $toggle-padding;
   width: $toggle-slider;
   left: $toggle-padding * 0.5;
   bottom: $toggle-padding * 0.5;
-  background-color: white;
+  background-color: var(--bg-color);
   border-radius: 50%;
   transition: $toggle-transition;
 }
 
 .theme-toggle input:checked+.slider {
-  background-color: #2196F3;
+  background-color: var(--text-color);
 }
 
 .theme-toggle input:checked+.slider::before {
