@@ -25,6 +25,7 @@ $neutral-900: hsl(0, 0, 10);
   --border-color-muted: #{$neutral-800};
 }
 
+@import "reset";
 @import "theme";
 @import "theme_toggle";
 @import "layout";
