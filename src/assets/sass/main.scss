@@ -1,3 +1,30 @@
+//// Colours
+$neutral-100: hsl(0, 0, 90);
+$neutral-200: hsl(0, 0, 80);
+$neutral-300: hsl(0, 0, 70);
+$neutral-400: hsl(0, 0, 60);
+$neutral-500: hsl(0, 0, 50);
+$neutral-600: hsl(0, 0, 40);
+$neutral-700: hsl(0, 0, 30);
+$neutral-800: hsl(0, 0, 20);
+$neutral-900: hsl(0, 0, 10);
+
+:root {
+  color-scheme: light;
+  --bg-color: white;
+  --text-color: black;
+  --text-color-muted: #{$neutral-500};
+  --border-color-muted: #{$neutral-200};
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-color: black;
+  --text-color: white;
+  --text-color-muted: #{$neutral-500};
+  --border-color-muted: #{$neutral-800};
+}
+
 @import "theme";
 @import "theme_toggle";
 @import "layout";
