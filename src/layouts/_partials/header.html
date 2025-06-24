@@ -1,15 +1,13 @@
-<div class="header container" role="navigation">
-    <nav class="navbar section" aria-label="Main Navigation">
-        <ul class="navbar-group">
-            <li><a href="/" class="logo-text">KG</a></li>
-        </ul>
-        <ul class="navbar-group">
-            {{ $currentPage := . }}
+<div class="container" role="navigation">
+    <nav class="navbar section space-between">
+        <a href="/" class="logo-text">KG</a></li>
+        <ul class="inline-list">
+
+            <!-- Loop Over Hugo Menu Items -->
             {{ range .Site.Menus.main }}
-            <li>
-                <a class="link" href="{{ .URL }}">{{ .Name }}</a>
-            </li>
+            <li><a class="link" href="{{ .URL }}">{{ .Name }}</a></li>
             {{ end }}
+
             <li>{{ partial "theme-toggle" . }}</li>
         </ul>
     </nav>
