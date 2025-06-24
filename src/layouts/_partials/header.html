@@ -1,14 +1,12 @@
-<div class="container" role="navigation">
-    <nav class="navbar section space-between">
-        <a href="/" class="logo-text">KG</a></li>
-        <ul class="inline-list">
+<nav class="navbar section space-between">
+    <a href="/" class="logo-text">KG</a></li>
+    <ul class="inline-list">
 
-            <!-- Loop Over Hugo Menu Items -->
-            {{ range .Site.Menus.main }}
-            <li><a class="link" href="{{ .URL }}">{{ .Name }}</a></li>
-            {{ end }}
+        <!-- Loop Over Hugo Menu Items -->
+        {{ range .Site.Menus.main }}
+        <li><a class="link" href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
 
-            <li>{{ partial "theme-toggle" . }}</li>
-        </ul>
-    </nav>
-</div>
+        <li>{{ partial "theme-toggle" . }}</li>
+    </ul>
+</nav>
