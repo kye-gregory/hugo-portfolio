@@ -1,5 +1,7 @@
-.footer {
-  font: var(--font-label);
-  color: var(--text-color-muted);
-  margin-bottom: 1rem;
+@layer section {
+  .footer {
+    font: var(--font-label);
+    color: var(--text-color-muted);
+    margin-bottom: 1rem;
+  }
 }

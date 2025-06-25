@@ -1,5 +1,7 @@
-.space-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@layer utility {
+  .space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

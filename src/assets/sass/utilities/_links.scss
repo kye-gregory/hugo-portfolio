@@ -1,3 +1,5 @@
-.link:hover {
-  font-style: italic;
+@layer utility {
+  .link:hover {
+    font-style: italic;
+  }
 }

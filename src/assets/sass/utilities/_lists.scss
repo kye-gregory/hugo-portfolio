@@ -1,4 +1,6 @@
-.inline-list {
-  display: inline-flex;
-  gap: 1em;
+@layer utility {
+  .inline-list {
+    display: inline-flex;
+    gap: 1em;
+  }
 }

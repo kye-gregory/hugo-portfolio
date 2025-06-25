@@ -1,17 +1,19 @@
-.navbar {
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-color: var(--border-color-muted);
-  border-radius: 0 0 0.5rem 0.5rem;
-  padding: 1.2rem 2rem;
-}
+@layer section {
+  .navbar {
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    border-color: var(--border-color-muted);
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1.2rem 2rem;
+  }
 
-.navlink {
-  font: var(--font-label);
-  text-transform: lowercase;
-}
+  .navlink {
+    font: var(--font-label);
+    text-transform: lowercase;
+  }
 
-.logo-text {
-  font: var(--font-logo);
-  text-transform: uppercase;
+  .logo-text {
+    font: var(--font-logo);
+    text-transform: uppercase;
+  }
 }

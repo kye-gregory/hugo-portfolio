@@ -26,31 +26,35 @@ $line-height-xs: 1.20em;
 
 $serif-family: sans-serif;
 
-:root {
-  color-scheme: light;
-  --bg-color: white;
-  --text-color: black;
-  --text-color-muted: #{$neutral-500};
-  --border-color-muted: #{$neutral-200};
-
-  &.dark {
-    color-scheme: dark;
-    --bg-color: black;
-    --text-color: white;
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg-color: white;
+    --text-color: black;
     --text-color-muted: #{$neutral-500};
-    --border-color-muted: #{$neutral-800};
+    --border-color-muted: #{$neutral-200};
+
+    &.dark {
+      color-scheme: dark;
+      --bg-color: black;
+      --text-color: white;
+      --text-color-muted: #{$neutral-500};
+      --border-color-muted: #{$neutral-800};
+    }
+
+    --font-h1: bold #{$font-size-xl}/#{$line-height-xs} #{$serif-family};
+    --font-h2: bold #{$font-size-lg}/#{$line-height-sm} #{$serif-family};
+    --font-h3: bold #{$font-size-md}/#{$line-height-md} #{$serif-family};
+    --font-body: #{$font-size-sm}/#{$line-height-md} #{$serif-family};
+    --font-label: #{$font-size-xs}/#{$line-height-md} #{$serif-family};
+    --font-link: bold #{$font-size-xs}/#{$line-height-md} #{$serif-family};
+    --font-logo: bold #{$font-size-sm}/#{$line-height-xs} #{$serif-family};
   }
 
-  --font-h1: bold #{$font-size-xl}/#{$line-height-xs} #{$serif-family};
-  --font-h2: bold #{$font-size-lg}/#{$line-height-sm} #{$serif-family};
-  --font-h3: bold #{$font-size-md}/#{$line-height-md} #{$serif-family};
-  --font-body: #{$font-size-sm}/#{$line-height-md} #{$serif-family};
-  --font-label: #{$font-size-xs}/#{$line-height-md} #{$serif-family};
-  --font-link: bold #{$font-size-xs}/#{$line-height-md} #{$serif-family};
-  --font-logo: bold #{$font-size-sm}/#{$line-height-xs} #{$serif-family};
-}
 
-
-body {
-  font-size: #{$font-size-base};
+  body {
+    font-size: #{$font-size-base};
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
 }
