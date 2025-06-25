@@ -4,7 +4,7 @@
 
         <!-- Loop Over Hugo Menu Items -->
         {{ range .Site.Menus.main }}
-        <li><a class="link" href="{{ .URL }}">{{ .Name }}</a></li>
+        <li><a class="navlink link" href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
 
         <li>{{ partial "theme-toggle" . }}</li>
