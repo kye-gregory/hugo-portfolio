@@ -15,14 +15,14 @@ $neutral-900: hsl(0, 0, 10);
   --text-color: black;
   --text-color-muted: #{$neutral-500};
   --border-color-muted: #{$neutral-200};
-}
 
-.dark {
-  color-scheme: dark;
-  --bg-color: black;
-  --text-color: white;
-  --text-color-muted: #{$neutral-500};
-  --border-color-muted: #{$neutral-800};
+  &.dark {
+    color-scheme: dark;
+    --bg-color: black;
+    --text-color: white;
+    --text-color-muted: #{$neutral-500};
+    --border-color-muted: #{$neutral-800};
+  }
 }
 
 @import "reset";
