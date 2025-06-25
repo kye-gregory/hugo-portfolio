@@ -9,6 +9,23 @@ $neutral-700: hsl(0, 0, 30);
 $neutral-800: hsl(0, 0, 20);
 $neutral-900: hsl(0, 0, 10);
 
+//// Fonts
+$font-size-base: 16px;
+$font-size-xl: 1.75rem;
+$font-size-lg: 1.50rem;
+$font-size-md: 1.25rem;
+$font-size-sm: 1.00rem;
+$font-size-xs: 0.85rem;
+
+$line-length-base: 70ch;
+$line-height-xl: 1.80em;
+$line-height-lg: 1.65em;
+$line-height-md: 1.50em;
+$line-height-sm: 1.35em;
+$line-height-xs: 1.20em;
+
+$serif-family: sans-serif;
+
 :root {
   color-scheme: light;
   --bg-color: white;
@@ -23,6 +40,14 @@ $neutral-900: hsl(0, 0, 10);
     --text-color-muted: #{$neutral-500};
     --border-color-muted: #{$neutral-800};
   }
+
+  --font-h1: bold #{$font-size-xl}/#{$line-height-xs} #{$serif-family};
+  --font-h2: bold #{$font-size-lg}/#{$line-height-sm} #{$serif-family};
+  --font-h3: bold #{$font-size-md}/#{$line-height-md} #{$serif-family};
+  --font-body: #{$font-size-sm}/#{$line-height-md} #{$serif-family};
+  --font-label: #{$font-size-xs}/#{$line-height-md} #{$serif-family};
+  --font-link: bold #{$font-size-xs}/#{$line-height-md} #{$serif-family};
+  --font-logo: bold #{$font-size-sm}/#{$line-height-xs} #{$serif-family};
 }
 
 @import "reset";

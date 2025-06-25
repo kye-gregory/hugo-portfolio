@@ -7,10 +7,11 @@
 }
 
 .navbar a:not(.logo-text) {
-  font-size: 0.9rem;
+  font: var(--font-label);
   text-transform: lowercase;
 }
 
 .logo-text {
-  font-weight: 900;
+  font: var(--font-logo);
+  text-transform: uppercase;
 }
