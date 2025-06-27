@@ -4,7 +4,7 @@
     border-width: 0 1px 1px 1px;
     border-color: var(--border-color-muted);
     border-radius: 0 0 0.5rem 0.5rem;
-    padding: 1.2rem 2rem;
+    padding: $space-250 $space-400;
   }
 
   .navlink {
@@ -15,5 +15,8 @@
   .logo-text {
     font: var(--font-logo);
     text-transform: uppercase;
+  }
+  .theme-toggle {
+    margin-left: $space-200;
   }
 }

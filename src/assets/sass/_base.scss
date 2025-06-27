@@ -15,7 +15,7 @@ $font-size-xl: 1.75rem;
 $font-size-lg: 1.50rem;
 $font-size-md: 1.25rem;
 $font-size-sm: 1.00rem;
-$font-size-xs: 0.85rem;
+$font-size-xs: 0.875rem;
 
 $line-length-base: 70ch;
 $line-height-xl: 1.80em;
@@ -25,6 +25,18 @@ $line-height-sm: 1.35em;
 $line-height-xs: 1.20em;
 
 $serif-family: sans-serif;
+
+//// Spacing
+$space-100: 0.50rem;
+$space-150: 0.75rem;
+$space-200: 1.00rem;
+$space-250: 1.25rem;
+$space-300: 1.50rem;
+$space-400: 2.00rem;
+$space-500: 2.50rem;
+$space-600: 3.00rem;
+$space-800: 4.00rem;
+$space-1000: 5.00rem;
 
 @layer base {
   :root {
@@ -53,7 +65,7 @@ $serif-family: sans-serif;
 
 
   body {
-    font-size: #{$font-size-base};
+    font: var(--font-body);
     background-color: var(--bg-color);
     color: var(--text-color);
   }

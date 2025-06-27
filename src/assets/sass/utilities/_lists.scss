@@ -1,6 +1,6 @@
 @layer utility {
   .inline-list {
     display: inline-flex;
-    gap: 1em;
+    gap: $space-200;
   }
 }
