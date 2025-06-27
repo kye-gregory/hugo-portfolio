@@ -16,6 +16,7 @@ $font-size-lg: 1.50rem;
 $font-size-md: 1.25rem;
 $font-size-sm: 1.00rem;
 $font-size-xs: 0.875rem;
+$font-size-xxs: 0.75rem;
 
 $line-length-base: 70ch;
 $line-height-xl: 1.80em;
@@ -37,6 +38,12 @@ $space-500: 2.50rem;
 $space-600: 3.00rem;
 $space-800: 4.00rem;
 $space-1000: 5.00rem;
+
+//// Breakpoint
+$bp-compact-header: 'max-width: 359px';
+$bp-compact-footer: 'max-width: 539px';
+$bp-extra-body-padding: 'min-width: 460px';
+$bp-smaller-font-size: 'max-width: 767px';
 
 @layer base {
   :root {
@@ -61,8 +68,17 @@ $space-1000: 5.00rem;
     --font-label: #{$font-size-xs}/#{$line-height-md} #{$serif-family};
     --font-link: bold #{$font-size-xs}/#{$line-height-md} #{$serif-family};
     --font-logo: bold #{$font-size-sm}/#{$line-height-xs} #{$serif-family};
-  }
 
+    @media ($bp-smaller-font-size) {
+      --font-h1: bold #{$font-size-lg}/#{$line-height-sm} #{$serif-family};
+      --font-h2: bold #{$font-size-md}/#{$line-height-md} #{$serif-family};
+      --font-h3: bold #{$font-size-sm}/#{$line-height-lg} #{$serif-family};
+      --font-body: #{$font-size-xs}/#{$line-height-lg} #{$serif-family};
+      --font-label: #{$font-size-xxs}/#{$line-height-lg} #{$serif-family};
+      --font-link: bold #{$font-size-xxs}/#{$line-height-lg} #{$serif-family};
+      --font-logo: bold #{$font-size-xs}/#{$line-height-md} #{$serif-family};
+    }
+  }
 
   body {
     font: var(--font-body);

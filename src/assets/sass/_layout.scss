@@ -4,6 +4,10 @@
     flex-direction: column;
     min-height: 100vh;
     min-width: 300px;
+
+    @media ($bp-extra-body-padding) {
+      padding: 0 $space-400;
+    }
   }
 
   .section {

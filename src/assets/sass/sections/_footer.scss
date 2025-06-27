@@ -3,5 +3,10 @@
     font: var(--font-label);
     color: var(--text-color-muted);
     margin-bottom: $space-400;
+    text-align: center;
+
+    @media ($bp-compact-footer) {
+      flex-direction: column-reverse;
+    }
   }
 }

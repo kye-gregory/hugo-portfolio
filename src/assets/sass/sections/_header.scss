@@ -16,7 +16,12 @@
     font: var(--font-logo);
     text-transform: uppercase;
   }
+
   .theme-toggle {
     margin-left: $space-200;
+
+    @media ($bp-compact-header) {
+      display: none;
+    }
   }
 }
