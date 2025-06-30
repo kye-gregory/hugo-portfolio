@@ -1,6 +1,17 @@
 @layer utility {
-  .link:hover {
+
+  .link:hover,
+  .arrow-link:hover {
     font-style: italic;
+  }
+
+  .arrow-link {
+    font-size: 0.85em;
+    text-transform: uppercase;
+  }
+
+  .arrow-link::after {
+    content: " →";
   }
 
   .button,
