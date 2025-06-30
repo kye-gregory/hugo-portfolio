@@ -64,13 +64,13 @@ $bp-smaller-font-size: 'max-width: 767px';
       --text-color-neutral: #{$neutral-500};
     }
 
-    --font-h1: bold #{$font-size-xl}/#{$line-height-xs} #{$serif-family};
-    --font-h2: bold #{$font-size-lg}/#{$line-height-sm} #{$serif-family};
-    --font-h3: bold #{$font-size-md}/#{$line-height-md} #{$serif-family};
-    --font-body: #{$font-size-sm}/#{$line-height-md} #{$serif-family};
-    --font-label: #{$font-size-xs}/#{$line-height-md} #{$serif-family};
-    --font-link: bold #{$font-size-xs}/#{$line-height-md} #{$serif-family};
-    --font-logo: bold #{$font-size-sm}/#{$line-height-xs} #{$serif-family};
+    --font-h1: bold #{$font-size-xl}/#{$line-height-sm} #{$serif-family};
+    --font-h2: bold #{$font-size-lg}/#{$line-height-md} #{$serif-family};
+    --font-h3: bold #{$font-size-md}/#{$line-height-lg} #{$serif-family};
+    --font-body: #{$font-size-sm}/#{$line-height-lg} #{$serif-family};
+    --font-label: #{$font-size-xs}/#{$line-height-lg} #{$serif-family};
+    --font-link: bold #{$font-size-xs}/#{$line-height-lg} #{$serif-family};
+    --font-logo: bold #{$font-size-sm}/#{$line-height-md} #{$serif-family};
 
     @media ($bp-smaller-font-size) {
       --font-h1: bold #{$font-size-lg}/#{$line-height-sm} #{$serif-family};
