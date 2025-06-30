@@ -50,16 +50,18 @@ $bp-smaller-font-size: 'max-width: 767px';
   :root {
     color-scheme: light;
     --bg-color: white;
+    --bg-color-muted: #{$neutral-200};
     --text-color: black;
-    --text-color-muted: #{$neutral-500};
-    --border-color-muted: #{$neutral-200};
+    --text-color-muted: #{$neutral-800};
+    --text-color-neutral: #{$neutral-500};
 
     &.dark {
       color-scheme: dark;
       --bg-color: black;
+      --bg-color-muted: #{$neutral-800};
       --text-color: white;
-      --text-color-muted: #{$neutral-500};
-      --border-color-muted: #{$neutral-800};
+      --text-color-muted: #{$neutral-200};
+      --text-color-neutral: #{$neutral-500};
     }
 
     --font-h1: bold #{$font-size-xl}/#{$line-height-xs} #{$serif-family};
