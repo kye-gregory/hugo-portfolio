@@ -1,0 +1,32 @@
+@layer section {
+  .biography {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // Section Takes Up Full Viewport - Header Height.
+    height: calc(100vh - 60px);
+    max-height: 20rem;
+
+    @media ($bp-extra-body-padding) {
+      align-items: center;
+      text-align: center;
+
+      max-height: 24rem;
+    }
+  }
+
+  .biography h1 {
+    font: var(--font-h1);
+  }
+
+  .biography p {
+    margin: $space-100 0 $space-300;
+  }
+
+  .biography .inline-list {
+    @media ($bp-extra-body-padding) {
+      flex-direction: row-reverse;
+    }
+  }
+}
