@@ -1,0 +1,59 @@
+<article class="small project-card">
+
+    {{ partial "light-dark-img" (dict
+    "page" .
+    "light" (.Resources.GetMatch "cover-light.*")
+    "dark" (.Resources.GetMatch "cover-dark.*")
+    "class" "project-card-cover"
+    "alt" "Project Cover"
+    )}}
+
+    <div class="project-card-content">
+        <div>
+            <h3 class="project-card-title">{{ .Title | default "Untitled"}}</h3>
+
+            {{ $langs := .GetTerms "languages" }}
+            {{ $tools := .GetTerms "tools" }}
+
+            {{ if or (gt (len $langs) 0) (gt (len $tools) 0) }}
+            <ul class="project-card-tags">
+                {{ with $langs }}
+                {{ range . }}
+                <li>{{ .LinkTitle }}</li>
+                {{ end }}
+                {{ end }}
+
+                {{ with $tools }}
+                {{ range . }}
+                <li>{{ .LinkTitle }}</li>
+                {{ end }}
+                {{ end }}
+            </ul>
+            {{ else }}
+            <span class="project-card-tags">
+                <li>No Tags</li>
+            </span>
+            {{ end }}
+
+        </div>
+        <span class="project-card-description">{{ .Summary | default "No Summary"}}</span>
+        <ul class="project-card-links">
+
+            {{ range .Params.links }}
+            <li>
+                <a class="button with-icon" href="{{ .url }}" target="_blank">
+                    {{ partial (printf "svg/%s" .icon) . }}
+                    {{ .title }}
+                </a>
+            </li>
+            {{ end }}
+
+            <li>
+                <a class="button with-icon" href="{{ .RelPermalink }}">
+                    {{ partial "svg/pen" . }}
+                    Blog Post
+                </a>
+            </li>
+        </ul>
+    </div>
+</article>

@@ -1,0 +1,123 @@
+@layer component {
+
+  /*/ CARD CONTAINER /*/
+  //////////////////////
+  .project-card {
+    // Default Vertical Layout
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bg-color-muted);
+    border-radius: $space-100;
+    overflow: hidden;
+
+    // Horizontal Layout On Large Screens
+    @media ($bp-horizontal-card-layout) {
+      display: grid;
+      grid-template-columns: 3fr 7fr;
+    }
+
+    // Highlight Border On Card Hover
+    &:hover {
+      border-color: var(--text-color);
+    }
+  }
+
+
+  /*/ CARD IMAGE /*/
+  //////////////////
+  .project-card-cover {
+    // Responsive Cover
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/1;
+    max-height: 6rem;
+
+    // Slightly Darken
+    filter: brightness(0.8);
+
+    .dark &.default-img {
+      filter: brightness(0.5);
+    }
+
+    // Highlight Cover On Card Hover
+    .project-card:hover & {
+      filter: brightness(1);
+
+      .dark &.default-img {
+        filter: brightness(0.7);
+      }
+    }
+
+    // Remove Max Height For Horizontal
+    @media ($bp-horizontal-card-layout) {
+      max-height: none;
+    }
+  }
+
+
+  /*/ CARD CONTENT CONTAINER /*/
+  ////////////////////////////////
+  .project-card-content {
+    padding: $space-200 $space-250;
+    user-select: none;
+  }
+
+
+  /*/ CARD TAGS /*/
+  /////////////////
+  .project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-75;
+
+    & li {
+      font: var(--font-label);
+      color: var(--text-color-muted);
+      line-height: $line-height-xs;
+    }
+  }
+
+
+  /*/ CARD DESCRIPTION /*/
+  ////////////////////////
+  .project-card-description {
+    font: var(--font-body);
+    display: block;
+    margin: $space-75 0 $space-200;
+    overflow: hidden;
+
+    // Keep Consistant Two Lines of Text
+    @media ($bp-horizontal-card-layout) {
+      height: calc(2em * #{$line-height-lg});
+    }
+  }
+
+
+  /*/ CARD LINKS /*/
+  //////////////////
+  .project-card-links {
+    display: flex;
+    gap: $space-100;
+    word-wrap: nowrap;
+  }
+
+  .project-card-links .button {
+    // Button Component Overrides
+    font: var(--font-label);
+    color: var(--text-color-muted);
+    background-color: var(--bg-color-muted);
+    padding: $space-50 $space-100;
+
+    // Highlight Buttons On Card Hover
+    .project-card:hover & {
+      color: var(--bg-color);
+      background-color: var(--text-color);
+    }
+
+    // Highlight On Button Hover
+    .project-card:hover &:hover {
+      background-color: var(--text-color-muted);
+    }
+  }
+}

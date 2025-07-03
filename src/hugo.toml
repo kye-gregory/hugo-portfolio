@@ -25,6 +25,10 @@ title = 'Kye Gregory | Portfolio'
         url = '/projects/'
         weight = 30
 
+[taxonomies]
+    language = 'languages'
+    tool = 'tools'
+
 [module]
     [[module.imports]]
         path = 'github.com/kye-gregory/hugo-portfolio-markdown'
