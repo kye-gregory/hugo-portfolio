@@ -1,0 +1,22 @@
+@layer utility {
+
+  .display-light {
+    display: initial;
+  }
+
+  .display-dark {
+    display: none;
+  }
+
+  .display-dark.display-light {
+    display: initial;
+  }
+
+  .dark .display-light {
+    display: none;
+  }
+
+  .dark .display-dark {
+    display: initial;
+  }
+}

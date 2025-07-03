@@ -1,0 +1,19 @@
+{{ $light := .light | default (.Page.Resources.GetMatch "light.*") }}
+{{ $dark := .dark | default (.Page.Resources.GetMatch "dark.*") }}
+{{ $fallback := .fallback | default (resources.GetMatch "images/default-img.*") }}
+{{ $class := .class | default "" }}
+{{ $alt := .alt | default "image" }}
+
+
+{{ with $light }}
+<img src="{{ .RelPermalink }}" class="display-light {{ $class }}">
+{{ end }}
+{{ with $dark }}
+<img src="{{ .RelPermalink }}" class="display-dark {{ $class }}">
+{{ end }}
+
+{{ if or (not $light) (not $dark) }}
+<img src="{{ $fallback.RelPermalink }}"
+    class="default-img {{ $class }}{{if not $light}} display-light{{end}}{{if not $dark}} display-dark{{end}}"
+    alt="{{ $alt }}">
+{{ end }}
