@@ -13,31 +13,4 @@
   .arrow-link::after {
     content: " →";
   }
-
-  .button,
-  .ghost-button {
-    border-radius: $space-50;
-    padding: $space-150 $space-300;
-    transition-duration: 0.1s;
-  }
-
-  .button {
-    color: var(--bg-color);
-    background-color: var(--text-color);
-
-    &:hover {
-      background-color: var(--text-color-muted);
-      border-color: var(--text-color-muted);
-    }
-  }
-
-  .ghost-button {
-    color: var(--text-color);
-    border: 1px solid var(--bg-color-muted);
-
-    &:hover {
-      color: var(--text-color);
-      border-color: var(--text-color);
-    }
-  }
 }
