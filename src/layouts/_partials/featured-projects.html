@@ -1,0 +1,18 @@
+<section class="featured-projects section section-spacing">
+    <div class="section-header">
+        <h2>Featured Projects</h2>
+        <a href="/projects" class="arrow-link">View All</a>
+    </div>
+
+
+    {{ $featured := first 3 (where (where .Site.RegularPages "Type" "projects") ".Params.featured" true) }}
+    {{ if gt (len $featured) 0 }}
+    <ul class="featured-projects-list">
+        {{ range $featured }}
+        <li>{{ partial "project-card" . }}</li>
+        {{ end }}
+    </ul>
+    {{ else }}
+    <span>No Featured Projects</span>
+    {{ end }}
+</section>

@@ -19,6 +19,18 @@
     box-sizing: border-box;
   }
 
+  .section-header {
+    margin-bottom: $space-250;
+  }
+
+  .section-spacing {
+    margin-bottom: calc(#{$space-500} * 2);
+
+    &:last-child {
+      margin-bottom: $space-500;
+    }
+  }
+
   main {
     flex-grow: 1;
   }
