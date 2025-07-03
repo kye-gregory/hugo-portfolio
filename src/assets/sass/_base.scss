@@ -11,7 +11,8 @@ $neutral-900: hsl(0, 0, 10);
 
 //// Fonts
 $font-size-base: 16px;
-$font-size-xl: 1.75rem;
+$font-size-xxl: 2.50rem;
+$font-size-xl: 2.00rem;
 $font-size-lg: 1.50rem;
 $font-size-md: 1.25rem;
 $font-size-sm: 1.00rem;
@@ -19,16 +20,18 @@ $font-size-xs: 0.875rem;
 $font-size-xxs: 0.75rem;
 
 $line-length-base: 70ch;
-$line-height-xl: 1.80em;
-$line-height-lg: 1.65em;
-$line-height-md: 1.50em;
-$line-height-sm: 1.35em;
-$line-height-xs: 1.20em;
+$line-height-xl: 1.80;
+$line-height-lg: 1.65;
+$line-height-md: 1.50;
+$line-height-sm: 1.35;
+$line-height-xs: 1.20;
 
 $serif-family: sans-serif;
 
 //// Spacing
-$space-50: 0.25em;
+$space-25: 0.125em;
+$space-50: 0.250em;
+$space-75: 0.375em;
 $space-100: 0.50em;
 $space-150: 0.75em;
 $space-200: 1.00em;
@@ -64,7 +67,7 @@ $bp-smaller-font-size: 'max-width: 767px';
       --text-color-neutral: #{$neutral-500};
     }
 
-    --font-h1: bold #{$font-size-xl}/#{$line-height-sm} #{$serif-family};
+    --font-h1: bold #{$font-size-xxl}/#{$line-height-sm} #{$serif-family};
     --font-h2: bold #{$font-size-lg}/#{$line-height-md} #{$serif-family};
     --font-h3: bold #{$font-size-md}/#{$line-height-lg} #{$serif-family};
     --font-body: #{$font-size-sm}/#{$line-height-lg} #{$serif-family};
@@ -73,7 +76,7 @@ $bp-smaller-font-size: 'max-width: 767px';
     --font-logo: bold #{$font-size-sm}/#{$line-height-md} #{$serif-family};
 
     @media ($bp-smaller-font-size) {
-      --font-h1: bold #{$font-size-lg}/#{$line-height-sm} #{$serif-family};
+      --font-h1: bold #{$font-size-xl}/#{$line-height-sm} #{$serif-family};
       --font-h2: bold #{$font-size-md}/#{$line-height-md} #{$serif-family};
       --font-h3: bold #{$font-size-sm}/#{$line-height-lg} #{$serif-family};
       --font-body: #{$font-size-xs}/#{$line-height-lg} #{$serif-family};
@@ -81,11 +84,43 @@ $bp-smaller-font-size: 'max-width: 767px';
       --font-link: bold #{$font-size-xxs}/#{$line-height-lg} #{$serif-family};
       --font-logo: bold #{$font-size-xs}/#{$line-height-md} #{$serif-family};
     }
+
+    & .small {
+      --font-h1: bold calc(#{$font-size-xxl} * 0.85)/#{$line-height-sm} #{$serif-family};
+      --font-h2: bold calc(#{$font-size-lg} * 0.85)/#{$line-height-md} #{$serif-family};
+      --font-h3: bold calc(#{$font-size-md} * 0.85)/#{$line-height-lg} #{$serif-family};
+      --font-body: calc(#{$font-size-sm} * 0.85)/#{$line-height-lg} #{$serif-family};
+      --font-label: calc(#{$font-size-xs} * 0.85)/#{$line-height-lg} #{$serif-family};
+      --font-link: bold calc(#{$font-size-xs} * 0.85)/#{$line-height-lg} #{$serif-family};
+      --font-logo: bold calc(#{$font-size-sm} * 0.85)/#{$line-height-md} #{$serif-family};
+
+      @media ($bp-smaller-font-size) {
+        --font-h1: bold calc(#{$font-size-xl} * 0.85)/#{$line-height-sm} #{$serif-family};
+        --font-h2: bold calc(#{$font-size-md} * 0.85)/#{$line-height-md} #{$serif-family};
+        --font-h3: bold calc(#{$font-size-sm} * 0.85)/#{$line-height-lg} #{$serif-family};
+        --font-body: calc(#{$font-size-xs} * 0.85)/#{$line-height-lg} #{$serif-family};
+        --font-label: calc(#{$font-size-xxs} * 0.85)/#{$line-height-lg} #{$serif-family};
+        --font-link: bold calc(#{$font-size-xxs} * 0.85)/#{$line-height-lg} #{$serif-family};
+        --font-logo: bold calc(#{$font-size-xs} * 0.85)/#{$line-height-md} #{$serif-family};
+      }
+    }
   }
 
   body {
     font: var(--font-body);
     background-color: var(--bg-color);
     color: var(--text-color);
+  }
+
+  h1 {
+    font: var(--font-h1);
+  }
+
+  h2 {
+    font: var(--font-h2);
+  }
+
+  h3 {
+    font: var(--font-h3);
   }
 }
