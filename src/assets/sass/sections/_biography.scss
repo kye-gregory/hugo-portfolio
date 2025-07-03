@@ -6,12 +6,14 @@
 
     // Section Takes Up Full Viewport - Header Height.
     height: calc(100vh - 60px);
-    max-height: 20rem;
+    max-height: 28rem;
 
     @media ($bp-extra-body-padding) {
       align-items: center;
       text-align: center;
+    }
 
+    @media ($bp-smaller-font-size) {
       max-height: 24rem;
     }
   }

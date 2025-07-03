@@ -46,8 +46,9 @@ $space-1000: 5.00em;
 //// Breakpoint
 $bp-compact-header: 'max-width: 359px';
 $bp-compact-footer: 'max-width: 539px';
-$bp-extra-body-padding: 'min-width: 460px';
-$bp-smaller-font-size: 'max-width: 767px';
+$bp-extra-body-padding: 'min-width: 540px';
+$bp-smaller-font-size: 'max-width: 410px';
+$bp-horizontal-card-layout: 'min-width: 610px';
 
 @layer base {
   :root {

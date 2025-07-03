@@ -2,7 +2,7 @@
   .footer {
     font: var(--font-label);
     color: var(--text-color-neutral);
-    margin-bottom: $space-400;
+    margin: $space-600 auto $space-800;
     text-align: center;
 
     @media ($bp-compact-footer) {

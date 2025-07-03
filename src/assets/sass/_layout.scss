@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    min-width: 300px;
+    min-width: 20rem;
 
     @media ($bp-extra-body-padding) {
       padding: 0 $space-400;
@@ -12,7 +12,7 @@
 
   .section {
     width: 100%;
-    max-width: 768px;
+    max-width: 48rem;
     margin: auto;
     padding-left: $space-400;
     padding-right: $space-400;
