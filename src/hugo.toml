@@ -3,7 +3,10 @@ languageCode = 'en-us'
 title = 'Kye Gregory | Portfolio'
 
 [params]
-  favicon = "images/favicon.ico"
+    favicon = "images/favicon.ico"
+    email = "kyegregory001@gmail.com"
+    github = "https://www.github.com/kye-gregory"
+    linkedin = "https://www.linkedin.com/in/kye-gregory-dev"
 
 [menu]
     [[menu.main]]
