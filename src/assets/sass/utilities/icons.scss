@@ -1,0 +1,13 @@
+@layer utility {
+  .with-icon {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .icon-container {
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin: 0 $space-100 $space-75;
+  }
+}
