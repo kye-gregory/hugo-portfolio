@@ -107,6 +107,10 @@ $bp-horizontal-card-layout: 'min-width: 610px';
     }
   }
 
+  * {
+    transition-duration: 0.1s;
+  }
+
   body {
     font: var(--font-body);
     background-color: var(--bg-color);
