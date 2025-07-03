@@ -1,0 +1,23 @@
+<section class="recent-posts section section-spacing">
+    <div class="section-header">
+        <h2>Recent Posts</h2>
+        <a href="/posts" class="arrow-link">View All</a>
+    </div>
+
+    {{ $recent := first 3 (where .Site.RegularPages "Type" "posts") }}
+    {{ if gt (len $recent) 0 }}
+    <ul class="small recent-posts-list">
+        {{ range $recent }}
+        <li>
+            <a class="link" href="{{ .RelPermalink }}">
+                <span class="post-title">{{ .Title}}</span>
+                <time class="post-date" datetime="{{ .PublishDate }}">{{ .PublishDate | time.Format ":date_medium"
+                    }}</time>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ else }}
+    <span>No Recent Posts</span>
+    {{ end }}
+</section>

@@ -1,0 +1,25 @@
+@layer section {
+  .recent-posts-list a {
+    display: flex;
+    justify-content: space-between;
+    gap: $space-200;
+    font: var(--font-body);
+    padding: $space-100 0;
+    margin: $space-100 0;
+  }
+
+  .recent-posts-list li:not(:last-child) {
+    border-bottom: 1px solid var(--bg-color-muted);
+  }
+
+  .post-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: "...";
+  }
+
+  .post-date {
+    flex-shrink: 0;
+    color: var(--text-color-muted);
+  }
+}
