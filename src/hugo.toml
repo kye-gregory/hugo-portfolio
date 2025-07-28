@@ -32,3 +32,8 @@ title = 'Kye Gregory'
 [module]
     [[module.imports]]
         path = 'github.com/kye-gregory/hugo-portfolio-markdown'
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = true  
