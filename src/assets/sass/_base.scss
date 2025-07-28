@@ -1,4 +1,5 @@
 //// Colours
+$neutral-050: hsl(0, 0, 95);
 $neutral-100: hsl(0, 0, 90);
 $neutral-200: hsl(0, 0, 80);
 $neutral-300: hsl(0, 0, 70);
@@ -8,6 +9,7 @@ $neutral-600: hsl(0, 0, 40);
 $neutral-700: hsl(0, 0, 30);
 $neutral-800: hsl(0, 0, 20);
 $neutral-900: hsl(0, 0, 10);
+$neutral-950: hsl(0, 0, 05);
 
 //// Fonts
 $font-size-base: 16px;
@@ -54,18 +56,22 @@ $bp-horizontal-card-layout: 'min-width: 610px';
   :root {
     color-scheme: light;
     --bg-color: white;
+    --bg-color-lite: #{$neutral-050};
     --bg-color-muted: #{$neutral-200};
     --text-color: black;
+    --text-color-lite: #{$neutral-900};
     --text-color-muted: #{$neutral-800};
-    --text-color-neutral: #{$neutral-500};
+    --color-neutral: #{$neutral-500};
 
     &.dark {
       color-scheme: dark;
       --bg-color: black;
+      --bg-color-lite: #{$neutral-900};
       --bg-color-muted: #{$neutral-800};
       --text-color: white;
+      --text-color-lite: #{$neutral-050};
       --text-color-muted: #{$neutral-200};
-      --text-color-neutral: #{$neutral-500};
+      --color-neutral: #{$neutral-500};
     }
 
     --font-h1: bold #{$font-size-xxl}/#{$line-height-sm} #{$serif-family};
