@@ -13,7 +13,6 @@ $neutral-950: hsl(0, 0, 05);
 
 //// Fonts
 $font-size-base: 16px;
-$font-size-xxl: 2.50rem;
 $font-size-xl: 2.00rem;
 $font-size-lg: 1.50rem;
 $font-size-md: 1.25rem;
@@ -74,7 +73,7 @@ $bp-horizontal-card-layout: 'min-width: 610px';
       --color-neutral: #{$neutral-500};
     }
 
-    --font-h1: bold #{$font-size-xxl}/#{$line-height-sm} #{$serif-family};
+    --font-h1: bold #{$font-size-xl}/#{$line-height-sm} #{$serif-family};
     --font-h2: bold #{$font-size-lg}/#{$line-height-md} #{$serif-family};
     --font-h3: bold #{$font-size-md}/#{$line-height-lg} #{$serif-family};
     --font-body: #{$font-size-sm}/#{$line-height-lg} #{$serif-family};
@@ -83,7 +82,7 @@ $bp-horizontal-card-layout: 'min-width: 610px';
     --font-logo: bold #{$font-size-sm}/#{$line-height-md} #{$serif-family};
 
     @media ($bp-smaller-font-size) {
-      --font-h1: bold #{$font-size-xl}/#{$line-height-sm} #{$serif-family};
+      --font-h1: bold #{$font-size-lg}/#{$line-height-sm} #{$serif-family};
       --font-h2: bold #{$font-size-md}/#{$line-height-md} #{$serif-family};
       --font-h3: bold #{$font-size-sm}/#{$line-height-lg} #{$serif-family};
       --font-body: #{$font-size-xs}/#{$line-height-lg} #{$serif-family};
@@ -93,7 +92,7 @@ $bp-horizontal-card-layout: 'min-width: 610px';
     }
 
     & .small {
-      --font-h1: bold calc(#{$font-size-xxl} * 0.85)/#{$line-height-sm} #{$serif-family};
+      --font-h1: bold calc(#{$font-size-xl} * 0.85)/#{$line-height-sm} #{$serif-family};
       --font-h2: bold calc(#{$font-size-lg} * 0.85)/#{$line-height-md} #{$serif-family};
       --font-h3: bold calc(#{$font-size-md} * 0.85)/#{$line-height-lg} #{$serif-family};
       --font-body: calc(#{$font-size-sm} * 0.85)/#{$line-height-lg} #{$serif-family};
@@ -102,7 +101,7 @@ $bp-horizontal-card-layout: 'min-width: 610px';
       --font-logo: bold calc(#{$font-size-sm} * 0.85)/#{$line-height-md} #{$serif-family};
 
       @media ($bp-smaller-font-size) {
-        --font-h1: bold calc(#{$font-size-xl} * 0.85)/#{$line-height-sm} #{$serif-family};
+        --font-h1: bold calc(#{$font-size-lg} * 0.85)/#{$line-height-sm} #{$serif-family};
         --font-h2: bold calc(#{$font-size-md} * 0.85)/#{$line-height-md} #{$serif-family};
         --font-h3: bold calc(#{$font-size-sm} * 0.85)/#{$line-height-lg} #{$serif-family};
         --font-body: calc(#{$font-size-xs} * 0.85)/#{$line-height-lg} #{$serif-family};
