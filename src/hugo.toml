@@ -1,6 +1,6 @@
 baseURL = ''
 languageCode = 'en-us'
-title = 'Kye Gregory | Portfolio'
+title = 'Kye Gregory'
 
 [params]
     favicon = "images/favicon.ico"
