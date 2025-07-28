@@ -1,0 +1,246 @@
+@layer section {
+
+  .blog-header {
+    margin-top: $space-800;
+    margin-bottom: $space-400;
+  }
+
+  .back-link {
+    text-transform: lowercase;
+  }
+
+  .blog-subtitle-list {
+    font: var(--font-label);
+    color: var(--color-neutral);
+    text-transform: capitalize;
+
+    & li {
+      display: inline;
+    }
+
+    & li:not(:last-child)::after {
+      content: " - ";
+    }
+  }
+
+  .blog-cover {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    aspect-ratio: 2/1;
+
+    .dark &.default-img {
+      filter: brightness(0.5);
+    }
+  }
+
+  .blog-content {
+    font: var(--font-body);
+
+    @media ($bp-extra-body-padding) {
+      text-align: justify;
+      hypens: auto;
+    }
+
+    // TEXT
+    h2 {
+      margin-top: $space-600;
+      margin-bottom: $space-50;
+    }
+
+    hr {
+
+      +h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+    }
+
+    h3 {
+      font: var(--font-label);
+      font-weight: 900;
+      margin-top: $space-400;
+      margin-bottom: $space-75;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: $space-50 0;
+
+      &+p {
+        margin-top: $space-150;
+      }
+    }
+
+
+    // Reduce Consecutive Margins:
+    h2+p,
+    h2+h3 {
+      margin-top: 0.2em;
+    }
+
+
+    h3+p {
+      margin-top: -0.2em;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    // Remove First Text Margin
+    > :first-child {
+      margin-top: $space-250;
+    }
+
+
+    a {
+      border-bottom: 1px solid var(--text-color);
+
+      &:hover {
+        font-style: italic;
+      }
+    }
+
+    sup .footnote-ref {
+      font: var(--font-label);
+      color: var(--color-neutral);
+      vertical-align: super;
+      line-height: 0;
+      text-decoration: none;
+      border: none;
+    }
+
+
+    // LISTS
+    ul {
+      list-style: initial;
+      padding-left: $space-400
+    }
+
+    ol {
+      list-style-type: decimal;
+      padding-left: $space-400;
+    }
+
+
+    // QUOTES
+    blockquote {
+      margin: $space-100 0;
+      padding: $space-100 0;
+      padding-left: 1em;
+      border-left: 0.25rem solid var(--bg-color-muted);
+      font-style: italic;
+    }
+
+    // IMAGES
+    img {
+      width: 100%;
+      margin: $space-100 0;
+    }
+
+
+    // CODE
+    // inline
+    code {
+      font: var(--font-label);
+      font-family: mono;
+      border: 1px solid var(--bg-color-muted);
+      padding: $space-25 $space-100;
+      border-radius: 0.15em;
+      margin: 0 $space-25;
+    }
+
+
+    // block container
+    .codeblock {
+      border: 1px solid var(--bg-color-muted);
+      border-radius: 0.2em;
+      padding: $space-100 $space-100;
+      margin: $space-150 0;
+    }
+
+    // block element
+    pre code {
+      font-family: mono;
+      display: block;
+
+      // inline resets
+      padding: 0;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+
+
+      // line numbers
+      span.lnt {
+        user-select: none;
+        pointer-events: none;
+        color: var(--color-neutral);
+        padding: $space-100 $space-200;
+        margin-right: $space-50;
+      }
+
+      // line regular
+      .line {
+        padding: $space-25 $space-75;
+      }
+
+      // line highlighted
+      .line.hl {
+        border-radius: 2px;
+        background-color: var(--bg-color-muted);
+      }
+    }
+
+
+    // TABLES
+    .table-container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-bottom: $space-300;
+    }
+
+    .table-container table {
+      font: var(--font-label);
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--bg-color-muted);
+
+      th {
+        font-weight: 700;
+      }
+
+      th,
+      td {
+        padding: 0.75em 1em;
+        border: 1px solid var(--bg-color-muted);
+      }
+
+      tbody tr:hover {
+        background-color: var(--bg-color-lite);
+      }
+    }
+
+
+    // FOOTNOTES
+    .footnotes hr {
+      display: none;
+    }
+
+    .footnote-backref {
+      border: none;
+    }
+
+    // MISC
+    hr {
+      margin: $space-500 0;
+      color: var(--bg-color-muted);
+    }
+  }
+}

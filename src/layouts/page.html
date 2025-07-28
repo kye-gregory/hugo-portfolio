@@ -1,0 +1,30 @@
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<section class="blog-post section">
+    <article>
+        <div class="blog-header">
+            <h1 class="blog-title">{{ .Title | default "Untitled" }}</h1>
+            <ul class="blog-subtitle-list">
+                {{ with .Params.BlogType }}<li>{{.}}</li>{{ end }}
+                {{ with .Params.ReadTime }}<li>{{.}}</li>{{ end }}
+                <li><time datetime="{{ .PublishDate }}">{{.PublishDate | time.Format ":date_long"}}</time>
+                </li>
+            </ul>
+            <p>
+                {{.Summary | default "( no description )"}}
+            </p>
+        </div>
+
+        {{ partial "light-dark-img" (dict
+        "page" .
+        "light" (.Resources.GetMatch "cover-light.*")
+        "dark" (.Resources.GetMatch "cover-dark.*")
+        "class" "blog-cover"
+        "alt" "Cover Image"
+        )}}
+
+        <div class="blog-content">{{ .Content }}</div>
+    </article>
+</section>
+{{ end }}
