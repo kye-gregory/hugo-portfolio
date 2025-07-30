@@ -1,20 +1,27 @@
 {{ define "title" }}{{ .Title }}{{ end }}
-
 {{ define "main" }}
-<section class="section">
-    <h2>{{ title .Section }}</h2>
-    <ol>
-        {{ range where .Site.RegularPages "Section" .Section }}
-        <li>
-            <article>
-                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                <p>{{ .Summary }}</p>
-                {{ if .Truncated }}
-                <a href="{{ .RelPermalink }}">Read more...</a>
-                {{ end }}
-            </article>
+<section class="posts-list section">
+    <h2 class="section-title">{{ title .Section }}</h2>
+    {{ $pages := where .Site.RegularPages "Section" .Section }}
+    {{ range $group := ($pages.GroupByDate "2006") }}
+    <h3 class="posts-list-year">{{ .Key }}</h3>
+    <ol class="posts-list">
+        {{ range .Pages }}
+        <li class="posts-list-item">
+            <a href="{{ .RelPermalink }}">
+                <article>
+                    <div class="posts-list-item-header">
+                        <strong class="post-title">{{ .Title | default "Untitled" }}</strong>
+                        <time class="post-date" datetime="{{ .PublishDate }}">
+                            {{ .PublishDate | time.Format ":date_medium" }}
+                        </time>
+                    </div>
+                    <span class="post-description">{{ .Summary | default "( no description )" }}</span>
+                </article>
+            </a>
         </li>
         {{ end }}
     </ol>
+    {{ end }}
 </section>
 {{ end }}
